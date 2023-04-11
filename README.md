@@ -27,7 +27,7 @@ soit morte (valeur 0 dans le tableau) soit vivante (valeur 1).
 
 J'utilise un tableau afin de stocker les paramètres rentrer par l'utilisateur.
 Le ficher "inp" doit pour cela être sous la forme :
-* Les aramètres dans l'ordre suivant.
+* Les paramètres dans l'ordre suivant.
   * Hauteur
   * Largeur
   * Nombre d'itérations souhaitées
