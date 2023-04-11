@@ -34,3 +34,4 @@ git clone https://github.com/florianRacine/TP-Centrale-Jeux-de-la-vie
 ```bash
 make build
 ```
+-> Cette commande permet de créer un ficher executable "prg"
