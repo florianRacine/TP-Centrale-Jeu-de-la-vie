@@ -12,11 +12,11 @@ soit morte (valeur 0 dans le tableau) soit vivante (valeur 1).
 
 ## Structure
 
-* Le fichier "inp" contient les paramètres fournis par l’utilisateur.
-* Le fichier "headers.h" contient les prototypes des fonctions crées pour ce projet.
-* Le ficher "function.c" contient les fonctions crées pour ce projet
-* Le ficher "main.c" contient le programme principal.
-* Le fichier "makefile" permet de compiler le projet.
+* Le fichier [inp](./inp) contient les paramètres fournis par l’utilisateur.
+* Le fichier [headers.h](./headers.h) contient les prototypes des fonctions crées pour ce projet.
+* Le ficher [function.c](./function.c) contient les fonctions crées pour ce projet
+* Le ficher [main.c](./main.c) contient le programme principal.
+* Le fichier [makefile](./makefile) permet de compiler le projet.
 
 ## Fonctionnement
 
