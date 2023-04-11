@@ -32,6 +32,12 @@ Le ficher "inp" doit pour cela être sous la forme :
   * Largeur
   * Nombre d'itérations souhaitées
 
+## Exemple
+
+Avec les paramètres M = 15, N = 10, K = 3 :
+
+![jeuDeLaVie](https://user-images.githubusercontent.com/103432737/231215091-2982a791-2631-4c68-b3f9-b41ae5b7e7b2.png)
+
 ## Installation
 
 ### Clone the repository
