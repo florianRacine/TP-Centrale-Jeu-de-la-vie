@@ -37,6 +37,7 @@ void afficherParametres(int M, int N, int K) {
 }
 
 void afficherJeuDeLaVie(int M, int N, int** tableau2d) {
+    printf("\n");
     printf("+");
     for (int j = 0; j < M; j++) {
         printf("-");
