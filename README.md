@@ -1,8 +1,5 @@
 # TP-Centrale-Jeux-de-la-vie
 
-![image](https://user-images.githubusercontent.com/103432737/231158178-f646bef6-cce4-44a1-8116-d8830f9d6b49.png)
-
-
 ## Objectif : 
 
 Créer en langage C un programme permettant de visualiser les évolutions d’un automate cellulaire, et plus précisément l’automate cellulaire créé par Conway et connu sous le nom de jeu de la vie :
@@ -31,6 +28,11 @@ Le ficher "inp" doit pour cela être sous la forme :
   * Hauteur
   * Largeur
   * Nombre d'itérations souhaitées
+
+## Exemple avec une image
+
+![jeuDeLaVie](https://user-images.githubusercontent.com/103432737/231217365-00ea03d0-cf1b-42de-9188-3509d17584be.png)
+
 
 ## Installation
 
