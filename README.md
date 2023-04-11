@@ -29,11 +29,10 @@ Le ficher "inp" doit pour cela être sous la forme :
   * Largeur
   * Nombre d'itérations souhaitées
 
-## Exemple
+## Exemple avec une image
 
-Avec les paramètres M = 15, N = 10, K = 3 :
+![jeuDeLaVie](https://user-images.githubusercontent.com/103432737/231217365-00ea03d0-cf1b-42de-9188-3509d17584be.png)
 
-![jeuDeLaVie](https://user-images.githubusercontent.com/103432737/231215091-2982a791-2631-4c68-b3f9-b41ae5b7e7b2.png)
 
 ## Installation
 
