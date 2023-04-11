@@ -28,7 +28,10 @@ soit morte (valeur 0 dans le tableau) soit vivante (valeur 1).
 J'utilise une hash map afin de stocker les paramètres rentrer par l'utilisateur.
 Le ficher "inp" doit pour cela être sous la forme :
 * Nombre de paramètres
-* Paramètre : valeur
+* Valeur des paramètres dans l'ordre suivant.
+  * Hauteur
+  * Largeur
+  * Nombre d'itérations souhaitées
 
 ## Installation
 
