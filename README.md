@@ -16,7 +16,7 @@ soit morte (valeur 0 dans le tableau) soit vivante (valeur 1).
 ## Structure
 
 * Le fichier "inp" contient les paramètres fournis par l’utilisateur.
-* Le fichier "function.h" contient les fonctions crées pour ce projet.
+* Le fichier "header.h" contient les fonctions crées pour ce projet.
 * Le ficher "main.c" contient le programme principal.
 * Le fichier "makefile" permet de compiler le projet.
 
