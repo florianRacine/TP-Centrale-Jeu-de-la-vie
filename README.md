@@ -25,10 +25,9 @@ soit morte (valeur 0 dans le tableau) soit vivante (valeur 1).
 
 ### Lecture des paramètres fournis par l’utilisateur
 
-J'utilise une hash map afin de stocker les paramètres rentrer par l'utilisateur.
+J'utilise un tableau afin de stocker les paramètres rentrer par l'utilisateur.
 Le ficher "inp" doit pour cela être sous la forme :
-* Nombre de paramètres
-* Valeur des paramètres dans l'ordre suivant.
+* Les aramètres dans l'ordre suivant.
   * Hauteur
   * Largeur
   * Nombre d'itérations souhaitées
