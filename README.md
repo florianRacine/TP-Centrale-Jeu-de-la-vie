@@ -1,4 +1,4 @@
-# TP-Centrale-Jeux-de-la-vie
+# TP-Centrale-Jeu-de-la-vie
 
 ## Objectif : 
 
