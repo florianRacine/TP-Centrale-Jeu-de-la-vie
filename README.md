@@ -21,6 +21,15 @@ soit morte (valeur 0 dans le tableau) soit vivante (valeur 1).
 * Le ficher "main.c" contient le programme principal.
 * Le fichier "makefile" permet de compiler le projet.
 
+## Fonctionnement
+
+### Lecture des paramètres fournis par l’utilisateur
+
+J'utilise une hash map afin de stocker les paramètres rentrer par l'utilisateur.
+Le ficher "inp" doit pour cela être sous la forme :
+* Nombre de paramètres
+* Paramètre : valeur
+
 ## Installation
 
 ### Clone the repository
