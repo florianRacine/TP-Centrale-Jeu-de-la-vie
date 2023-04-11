@@ -12,3 +12,9 @@ Créer en langage C un programme permettant de visualiser les évolutions d’un
 * On dispose d’un tableau 2D de dimension N×M, chacune des cases comportant une cellule qui peut être
 soit morte (valeur 0 dans le tableau) soit vivante (valeur 1).
 * A partir de la configuration de ce tableau à l’étape numéro i, on peut déterminer la configuration du tableau à l’étape i + 1.
+
+## Installation
+
+```bash
+git clone https://github.com/florianRacine/TP-Centrale-Jeux-de-la-vie
+```
