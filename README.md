@@ -23,7 +23,14 @@ soit morte (valeur 0 dans le tableau) soit vivante (valeur 1).
 
 ## Installation
 
+### Clone the repository
+
 ```bash
 git clone https://github.com/florianRacine/TP-Centrale-Jeux-de-la-vie
 ```
 
+### Build the project
+
+```bash
+make build
+```
