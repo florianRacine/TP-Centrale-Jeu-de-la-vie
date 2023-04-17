@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "headers.h"
 #include <time.h>
+#include <unistd.h>
 
 void afficherHello(void) {
 
@@ -153,6 +154,8 @@ void runJeuDeLaVie(int M, int N, int K) {
     afficherJeuDeLaVie(M, N, tableau2d);
 
     for (int i = 1; i <= K; i++) {
+        usleep(100000);
+        system("clear");
         printf("Genération numéro : %d", i);
         avancerGeneration(M, N, tableau2d);
         afficherJeuDeLaVie(M, N, tableau2d);
