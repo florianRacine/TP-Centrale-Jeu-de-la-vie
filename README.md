@@ -42,23 +42,325 @@ Si il n'y a pas de nom de carte fourni dans la ligne de commande, la carte va ê
 
 Lancer le jeu de la vie avec un planeur :
 ```bash
-./prg 13 14 30 planeur
+./prg 13 14 10 planeur
+```
+
+```bash
+Genération numéro : 1
++-------------+
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|    o o      |
+|     oo      |
+|     o       |
+|             |
+|             |
+|             |
+|             |
+|             |
++-------------+
+Genération numéro : 2
++-------------+
+|             |
+|             |
+|             |
+|             |
+|             |
+|            |
+|      o      |
+|    o o      |
+|     oo      |
+|             |
+|             |
+|             |
+|             |
+|             |
++-------------+
+Genération numéro : 3
++-------------+
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|     o       |
+|      oo     |
+|     oo      |
+|             |
+|             |
+|             |
+|             |
+|             |
++-------------+
+Genération numéro : 4
++-------------+
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|      o      |
+|       o     |
+|     ooo     |
+|             |
+|             |
+|             |
+|             |
+|             |
++-------------+
+Genération numéro : 5
++-------------+
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|     o o     |
+|      oo     |
+|      o      |
+|             |
+|             |
+|             |
+|             |
++-------------+
+Genération numéro : 6
++-------------+
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|       o     |
+|     o o     |
+|      oo     |
+|             |
+|             |
+|             |
+|             |
++-------------+
+Genération numéro : 7
++-------------+
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|      o      |
+|       oo    |
+|      oo     |
+|             |
+|             |
+|             |
+|             |
++-------------+
+Genération numéro : 8
++-------------+
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|       o     |
+|        o    |
+|      ooo    |
+|             |
+|             |
+|             |
+|             |
++-------------+
+Genération numéro : 9
++-------------+
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|      o o    |
+|       oo    |
+|       o     |
+|             |
+|             |
+|             |
++-------------+
+Genération numéro : 10
++-------------+
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|        o    |
+|      o o    |
+|       oo    |
+|             |
+|             |
+|             |
++-------------+
 ```
 
 Lancer le jeu de la vie avec une carte de 30*30 aléatoirement :
 ```bash
-./prg 30 30 30
+./prg 10 10 10
 ```
+
+```bash
+Genération numéro : 1
++----------+
+|ooo o o o |
+|         o|
+|o o o    o|
+|o     o   |
+| o      o |
+|          |
+| o       o|
+|    o     |
+| o       o|
+| oooooo o |
++----------+
+Genération numéro : 2
++----------+
+| o        |
+|o o  o  oo|
+| o        |
+|o         |
+|          |
+|          |
+|          |
+|          |
+| o        |
+| ooooo    |
++----------+
+Genération numéro : 3
++----------+
+| o        |
+|o o       |
+|oo        |
+|          |
+|          |
+|          |
+|          |
+|          |
+| o oo     |
+| oooo     |
++----------+
+Genération numéro : 4
++----------+
+| o        |
+|o o       |
+|oo        |
+|          |
+|          |
+|          |
+|          |
+|          |
+| o  o     |
+| o  o     |
++----------+
+Genération numéro : 5
++----------+
+| o        |
+|o o       |
+|oo        |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
++----------+
+Genération numéro : 6
++----------+
+| o        |
+|o o       |
+|oo        |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
++----------+
+Genération numéro : 7
++----------+
+| o        |
+|o o       |
+|oo        |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
++----------+
+Genération numéro : 8
++----------+
+| o        |
+|o o       |
+|oo        |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
++----------+
+Genération numéro : 9
++----------+
+| o        |
+|o o       |
+|oo        |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
++----------+
+Genération numéro : 10
++----------+
+| o        |
+|o o       |
+|oo        |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
++----------+
+```
+
 
 Lancer le jeu de la vie avec les paramètres de [inp](./inp) :
 ```bash
 ./prg
 ```
-
-## Exemple avec une image
-
-![jeuDeLaVie](https://user-images.githubusercontent.com/103432737/231217365-00ea03d0-cf1b-42de-9188-3509d17584be.png)
-
 
 ## Installation
 
