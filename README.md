@@ -22,17 +22,345 @@ soit morte (valeur 0 dans le tableau) soit vivante (valeur 1).
 
 ### Lecture des paramètres fournis par l’utilisateur
 
-J'utilise un tableau afin de stocker les paramètres rentrer par l'utilisateur.
-Le ficher "inp" doit pour cela être sous la forme :
+#### Dimensions et nombre de générations
+
+Si les paramètres des dimensions et du nombre de générations du jeu de la vie ne sont pas entrer en argument.
+Le programme va utiliser les paramètres du fichier [inp](./inp).
+
+Le ficher [inp](./inp) doit pour cela être sous la forme :
 * Les paramètres dans l'ordre suivant.
   * Hauteur
   * Largeur
   * Nombre d'itérations souhaitées
 
-## Exemple avec une image
+#### Initialiser la carte
 
-![jeuDeLaVie](https://user-images.githubusercontent.com/103432737/231217365-00ea03d0-cf1b-42de-9188-3509d17584be.png)
+Vous pouvez initialiser la carte avec un fichier texte dont le nom doit être fourni en 4 ème arguments de la ligne de commande.
+Si il n'y a pas de nom de carte fourni dans la ligne de commande, la carte va être initialiser aléatoirement
 
+#### Exemple de commande
+
+Lancer le jeu de la vie avec un planeur :
+```bash
+./prg 13 14 10 planeur
+```
+
+```bash
+Genération numéro : 1
++-------------+
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|    o o      |
+|     oo      |
+|     o       |
+|             |
+|             |
+|             |
+|             |
+|             |
++-------------+
+Genération numéro : 2
++-------------+
+|             |
+|             |
+|             |
+|             |
+|             |
+|            |
+|      o      |
+|    o o      |
+|     oo      |
+|             |
+|             |
+|             |
+|             |
+|             |
++-------------+
+Genération numéro : 3
++-------------+
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|     o       |
+|      oo     |
+|     oo      |
+|             |
+|             |
+|             |
+|             |
+|             |
++-------------+
+Genération numéro : 4
++-------------+
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|      o      |
+|       o     |
+|     ooo     |
+|             |
+|             |
+|             |
+|             |
+|             |
++-------------+
+Genération numéro : 5
++-------------+
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|     o o     |
+|      oo     |
+|      o      |
+|             |
+|             |
+|             |
+|             |
++-------------+
+Genération numéro : 6
++-------------+
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|       o     |
+|     o o     |
+|      oo     |
+|             |
+|             |
+|             |
+|             |
++-------------+
+Genération numéro : 7
++-------------+
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|      o      |
+|       oo    |
+|      oo     |
+|             |
+|             |
+|             |
+|             |
++-------------+
+Genération numéro : 8
++-------------+
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|       o     |
+|        o    |
+|      ooo    |
+|             |
+|             |
+|             |
+|             |
++-------------+
+Genération numéro : 9
++-------------+
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|      o o    |
+|       oo    |
+|       o     |
+|             |
+|             |
+|             |
++-------------+
+Genération numéro : 10
++-------------+
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|        o    |
+|      o o    |
+|       oo    |
+|             |
+|             |
+|             |
++-------------+
+```
+
+Lancer le jeu de la vie avec une carte de 10*10 aléatoirement :
+```bash
+./prg 10 10 10
+```
+
+```bash
+Genération numéro : 1
++----------+
+|ooo o o o |
+|         o|
+|o o o    o|
+|o     o   |
+| o      o |
+|          |
+| o       o|
+|    o     |
+| o       o|
+| oooooo o |
++----------+
+Genération numéro : 2
++----------+
+| o        |
+|o o  o  oo|
+| o        |
+|o         |
+|          |
+|          |
+|          |
+|          |
+| o        |
+| ooooo    |
++----------+
+Genération numéro : 3
++----------+
+| o        |
+|o o       |
+|oo        |
+|          |
+|          |
+|          |
+|          |
+|          |
+| o oo     |
+| oooo     |
++----------+
+Genération numéro : 4
++----------+
+| o        |
+|o o       |
+|oo        |
+|          |
+|          |
+|          |
+|          |
+|          |
+| o  o     |
+| o  o     |
++----------+
+Genération numéro : 5
++----------+
+| o        |
+|o o       |
+|oo        |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
++----------+
+Genération numéro : 6
++----------+
+| o        |
+|o o       |
+|oo        |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
++----------+
+Genération numéro : 7
++----------+
+| o        |
+|o o       |
+|oo        |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
++----------+
+Genération numéro : 8
++----------+
+| o        |
+|o o       |
+|oo        |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
++----------+
+Genération numéro : 9
++----------+
+| o        |
+|o o       |
+|oo        |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
++----------+
+Genération numéro : 10
++----------+
+| o        |
+|o o       |
+|oo        |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
+|          |
++----------+
+```
+
+
+Lancer le jeu de la vie avec les paramètres de [inp](./inp) :
+```bash
+./prg
+```
 
 ## Installation
 
