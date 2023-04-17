@@ -218,7 +218,7 @@ Genération numéro : 10
 +-------------+
 ```
 
-Lancer le jeu de la vie avec une carte de 30*30 aléatoirement :
+Lancer le jeu de la vie avec une carte de 10*10 aléatoirement :
 ```bash
 ./prg 10 10 10
 ```
