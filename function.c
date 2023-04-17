@@ -190,7 +190,6 @@ void runJeuDeLaVie(int M, int N, int K, int argc, char* nomFichier) {
 
     for (int i = 1; i <= K; i++) {
         usleep(500000);
-        system("clear");
         printf("Genération numéro : %d", i);
         avancerGeneration(M, N, tableau2d);
         afficherJeuDeLaVie(M, N, tableau2d);
