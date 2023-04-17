@@ -1,8 +1,11 @@
 void afficherHello(void);
-void recupererParametres(int *, int *, int *);
+void recupererParametres(int*, int*, int*);
+void recupererCarteInitial(int, int, int, char*, int**);
 void afficherParametres(int, int, int);
-void runJeuDeLaVie(int, int, int);
+void runJeuDeLaVie(int, int, int, int, char*);
 void afficherJeuDeLaVie(int, int, int**);
 void initialiserTableau(int, int ,int**);
 void initialiserTableauAleatoire(int, int, int**);
-void avancerGeneration(int M, int N, int** tableau2d);
+void avancerGeneration(int M, int N, int**);
+int** allouerTableau2D(int, int);
+void libererTableau2D(int, int, int**);

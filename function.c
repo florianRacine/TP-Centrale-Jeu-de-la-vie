@@ -4,26 +4,44 @@
 #include <time.h>
 #include <unistd.h>
 
-void afficherHello(void) {
-
-    printf("Hello world!\n");
-
-    return;
-}
-
 void recupererParametres(int* p_M, int* p_N, int* p_K) {
     FILE* file = fopen("inp", "r"); // Lecture uniquement
 
     // Test pour voir si le fichier existe
     if (file == NULL) {
-        printf("Erreur! Le fichier ne peut pas être ouvert\n");
+        printf("Erreur! Le fichier de paramètre ne peut pas être ouvert\n");
         exit(-1);
+    } else {
+        fscanf(file, "%d", p_M);
+        fscanf(file, "%d", p_N);
+        fscanf(file, "%d", p_K);
     }
-    fscanf(file, "%d", p_M);
-    fscanf(file, "%d", p_N);
-    fscanf(file, "%d", p_K);
-
     fclose(file);
+
+    return;
+}
+
+void recupererCarteInitial(int M, int N, int K, char *nomFichier, int** tableau2d) {
+    FILE* file = fopen(nomFichier, "r"); // Lecture uniquement
+
+    // Test pour voir si le fichier existe
+    if (file == NULL) {
+        printf("Le fichier correspondant à la carte n'a pas été trouvé\n");
+    } else {
+        printf("Le fichier correspondant à la carte a été trouvé\n");
+        for (int i = 0; i < N; i++) { 
+            for (int j = 0; j < M; j++) {
+                fscanf(file, "%d", &tableau2d[i][j]);
+            }
+        }
+    }
+
+    return;
+}
+
+void afficherHello(void) {
+
+    printf("Hello world!\n");
 
     return;
 }
@@ -72,6 +90,8 @@ void initialiserTableau(int M, int N, int** tableau2d) {
             tableau2d[i][j] = 0;
         }
     }
+
+    return ;
 }
 
 void initialiserTableauAleatoire(int M, int N, int** tableau2d) {
@@ -82,13 +102,12 @@ void initialiserTableauAleatoire(int M, int N, int** tableau2d) {
             tableau2d[i][j] = rand() % 2; // Cellule morte (0) ou vivante (1)
         }
     }
+
+    return ;
 }
 
 void avancerGeneration(int M, int N, int** tableau2d) {
-    int** nouveauTableau = malloc(N * sizeof(int*));
-    for(int i = 0; i < N; i++) {
-        nouveauTableau[i] = malloc(M*sizeof(int));
-    }
+    int** nouveauTableau = allouerTableau2D(M, N);
 
     // Parcours des cellules du tableau d'origine
     for(int i = 0; i < N; i++) {
@@ -134,39 +153,51 @@ void avancerGeneration(int M, int N, int** tableau2d) {
     }
 
     // Libération de la mémoire allouée pour le nouveau tableau
-    for(int i = 0; i < N; i++) {
-        free(nouveauTableau[i]);
-    }
-    free(nouveauTableau);
+    libererTableau2D(M, N, nouveauTableau);
 }
 
-
-void runJeuDeLaVie(int M, int N, int K) {
-    // Allocation dynamique d'un tableau en 2d
+int** allouerTableau2D(int M, int N) {
     int** tableau2d = malloc(N * sizeof(int*)); // Allocation de l'espace mémoire pour les lignes
 
     for (int i = 0; i < N; i++) {
         tableau2d[i] = malloc(M * sizeof(int)); // Allocation de l'espace mémoire pour les colonnes
     }
 
-    initialiserTableauAleatoire(M, N, tableau2d);
+    return tableau2d;
+}
+
+void libererTableau2D(int M, int N, int** tableau2d) {
+    for (int i = 0; i < N; i++) {
+        free(tableau2d[i]); // Libération de l'espace mémoire pour les colonnes
+    }
+
+    free(tableau2d); // Libération de l'espace mémoire pour les lignes
+
+    return;
+}
+
+void runJeuDeLaVie(int M, int N, int K, int argc, char* nomFichier) {
+    // Allocation dynamique d'un tableau en 2d
+    int** tableau2d = allouerTableau2D(M, N);
+
+    if (argc <= 4) {
+        initialiserTableauAleatoire(M, N, tableau2d);
+    } else {
+        recupererCarteInitial(M ,N ,K, nomFichier, tableau2d);
+    }
 
     afficherJeuDeLaVie(M, N, tableau2d);
 
     for (int i = 1; i <= K; i++) {
-        usleep(100000);
+        usleep(500000);
         system("clear");
         printf("Genération numéro : %d", i);
         avancerGeneration(M, N, tableau2d);
         afficherJeuDeLaVie(M, N, tableau2d);
     }
 
-    // Suppression du tableau en 2d
-    for (int i = 0; i < N; i++) {
-        free(tableau2d[i]);
-    }
-
-    free(tableau2d);
+    // Libération du tableau en 2d
+    libererTableau2D(M, N, tableau2d);
 
     return;
 }
